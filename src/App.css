@@ -22,7 +22,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column; */
-	padding: 0 20px 20px 0;
+	padding: 0 20px 20px 20px;
 }
 .input_container> input {
 	border-radius: 40px;
@@ -72,7 +72,7 @@ button {
 .item_subcont {
 	display: flex;
 	gap: 10px;
-	padding: 10px 20px;
+	padding:10px 20px 10px 0;
 	align-items: center;
 }
 .item input {
@@ -95,7 +95,7 @@ button {
 @media (max-width: 400px) {
 	.item_subcont {
 		font-size: 14px;
-		padding: 7px 20px;
+		padding: 7px 20px 7px 0;
 	}
 	.item {
 		justify-content: space-between;
