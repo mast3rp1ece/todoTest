@@ -10,7 +10,7 @@ interface ITodoList {
 const TodoList: React.FC<ITodoList> = (props) => {
 	const { items, toggleTodo, removeTodo} = props;
 
-	return <div className="item_container__holder">
+	return <div className="item_containe__holder">
 		{
 			items.map(todo => 
 			<TodoItem 

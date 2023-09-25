@@ -22,7 +22,7 @@ button {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column; */
-	padding: 0 0 20px 0;
+	padding: 0 20px 20px 0;
 }
 .input_container> input {
 	border-radius: 40px;
@@ -68,6 +68,9 @@ button {
 }
 .item {
 	display: flex;
+}
+.item_subcont {
+	display: flex;
 	gap: 10px;
 	padding: 10px 20px;
 	align-items: center;
@@ -85,15 +88,17 @@ button {
 	cursor: pointer;
 	transition: .3s ease;
 	font-size: 16px;
-	margin-top: -1px;
 }
 .remove_button:hover {
 	transform: scale(1.2);
 }
 @media (max-width: 400px) {
-	.item {
+	.item_subcont {
 		font-size: 14px;
 		padding: 7px 20px;
+	}
+	.item {
+		justify-content: space-between;
 	}
 }
 .completed {
