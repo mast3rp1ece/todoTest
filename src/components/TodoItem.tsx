@@ -10,10 +10,10 @@ const TodoItem: React.FC<ITodoItem> = (props) => {
 
 	return <div className='item'>
 		<div className="item_subcont">
-			<input readOnly type="checkbox" checked={complete} onChange={() => toggleTodo(id)}/>
-			<span className={`title ${complete ? 'completed' : ''}`}>{title}</span>
+			<input id={`checkbox_${id}`} type="checkbox" checked={complete} onChange={() => toggleTodo(id)}/>
+			<label htmlFor={`checkbox_${id}`} className={`title ${complete ? 'completed' : ''}`}>{title}</label>
 		</div>
-		<button className="remove_button" onClick={() => removeTodo(id)}>x</button>
+		<button className="remove_button" onClick={() => removeTodo(id)}></button>
 	</div>
 }
 

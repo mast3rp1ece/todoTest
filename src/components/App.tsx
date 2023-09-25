@@ -3,6 +3,8 @@ import TodoList from './TodoList';
 import { ITodo } from '../types/data';
 import '../App.css';
 
+
+
 const App: React.FC = () => {
 	const [value, setValue] = useState('');
 	const [todos, setTodos] = useState<ITodo[]>([]);

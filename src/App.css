@@ -68,6 +68,7 @@ button {
 }
 .item {
 	display: flex;
+	align-items: center;
 }
 .item_subcont {
 	display: flex;
@@ -82,25 +83,20 @@ button {
 	accent-color: greenyellow;
 }
 .remove_button {
-	color: red;
 	border: none;
-	background: transparent;
+	background: url(./img/close.svg) 100%/100% no-repeat;
+	height: 20px;
+	width: 20px;
 	cursor: pointer;
+	/* border: 1px solid red; */
 	transition: .3s ease;
 	font-size: 16px;
+	
 }
 .remove_button:hover {
 	transform: scale(1.2);
 }
-@media (max-width: 400px) {
-	.item_subcont {
-		font-size: 14px;
-		padding: 7px 20px 7px 0;
-	}
-	.item {
-		justify-content: space-between;
-	}
-}
+
 .completed {
 	color: grey;
 	text-decoration: line-through;
@@ -111,4 +107,21 @@ button {
 }
 .item input:checked + .item_container__holder {
 	order: -1;
+}
+.title {
+	cursor: pointer;
+}
+
+@media (max-width: 400px) {
+	.item_subcont {
+		font-size: 14px;
+	}
+	.item {
+		justify-content: space-between;
+	}
+	.remove_button {
+		border: 1px solid red;
+		width: 40px;
+		background: url(./img/close.svg) 50%/50% no-repeat;
+	}
 }
