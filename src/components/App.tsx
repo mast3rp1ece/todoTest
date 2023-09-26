@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef} from 'react';
+import { useState } from 'react';
 import TodoList from './TodoList';
 import { ITodo } from '../types/data';
 import '../App.css';
@@ -8,8 +8,6 @@ import '../App.css';
 const App: React.FC = () => {
 	const [value, setValue] = useState('');
 	const [todos, setTodos] = useState<ITodo[]>([]);
-
-	const inputRef = useRef<HTMLInputElement>(null);
 	
 	const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
 		setValue(e.target.value)
@@ -46,14 +44,14 @@ const App: React.FC = () => {
 			}
 		}))
 	}
-	useEffect(() => {
-		inputRef.current?.focus();
-	})
+	// useEffect(() => {
+	// 	inputRef.current?.focus();
+	// })
 
 	return (
 		<div className='app_container'>
 			<div className='input_container'>
-				<input className='add_input' value={value} onChange={handleChange} onKeyDown={handleKeyDown} type="text" ref={inputRef} placeholder='type new todo' />
+				<input className='add_input' value={value} onChange={handleChange} onKeyDown={handleKeyDown} type="text" placeholder='type new todo' />
 				<button onClick={addTodo}>Add</button>
 			</div>
 			<TodoList items={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
